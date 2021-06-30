@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="opel_array">
+        <item>Agila</item>
+        <item>Astra</item>
+        <item>GT</item>
+        <item>Kadett</item>
+        <item>Omega</item>
+        <item>Signum</item>
+        <item>Sintra</item>
+        <item>Vectra</item>
+        <item>Zafira</item>
+    </string-array>
+</resources>

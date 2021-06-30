@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="subaru_array">
+        <item>BRZ</item>
+        <item>Forester</item>
+        <item>Impreza</item>
+        <item>Legacy</item>
+        <item>Outback</item>
+        <item>Trezia</item>
+        <item>Wrx</item>
+    </string-array>
+</resources>

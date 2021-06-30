@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ferrari_array">
+        <item>Italia</item>
+        <item>California</item>
+        <item>Spider</item>
+        <item>Tributo</item>
+        <item>Testarossa</item>
+    </string-array>
+</resources>

@@ -1,0 +1,19 @@
+ www 12:34:56:78:90:AB:CB:EF:12:34:56:78:90:AB:CD:EF:AA:BB:CC:DD
+
+and 05:3E:FE:FE:C9:02:38:43:5F:58:BF:B1:0E:5C:8E:40:FC:EE:BF:9B
+
+keytool -keystore path-to-debug-or-production-keystore -list -v
+
+
+
+identyfikator klienta
+1043500498099-cecchemdln4p5g9pvo7hcp7b9robg65f.apps.googleusercontent.com
+1043500498099-cecchemdln4p5g9pvo7hcp7b9robg65f.apps.googleusercontent.com
+tajny klucz klienta
+NSHbZQ83A75vHyUyIBVFopnZ
+
+new 1043500498099-b11s2mad6fasfa9kpbti9k3h0qdr77vl.apps.googleusercontent.com
+keytool -list -v -keystore C:\Users\WiktorPC\.android\debug.keystore  -alias AndroidDebugKey
+
+Store: C:\Users\WiktorPC\.android\debug.keystore
+Alias: AndroidDebugKey

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mazda_array">
+        <item>CX-3</item>
+        <item>CX-30</item>
+        <item>CX-5</item>
+        <item>CX-9</item>
+        <item>Demio</item>
+        <item>MX-5</item>
+        <item>RX-7</item>
+        <item>RX-8</item>
+        <item>Tribute</item>
+    </string-array>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/acme</item>
+        <item>@font/allerta</item>
+        <item>@font/amaranth_bold</item>
+        <item>@font/amaranth_italic</item>
+        <item>@font/audiowide</item>
+        <item>@font/bangers</item>
+        <item>@font/days_one</item>
+        <item>@font/mitr_medium</item>
+        <item>@font/racing_sans_one</item>
+        <item>@font/ranchers</item>
+        <item>@font/salsa</item>
+        <item>@font/strait</item>
+    </array>
+</resources>

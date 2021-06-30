@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ford_array">
+        <item>Fiesta</item>
+        <item>C-max</item>
+        <item>B-max</item>
+        <item>Mondeo</item>
+        <item>Capri</item>
+        <item>Escape</item>
+        <item>Escort</item>
+        <item>Explorer</item>
+        <item>Flex</item>
+        <item>Galaxy</item>
+<!--        <item>Ka</item>-->
+<!--        <item>Maverick</item>-->
+<!--        <item>Mustang</item>-->
+<!--        <item>Puma</item>-->
+    </string-array>
+</resources>

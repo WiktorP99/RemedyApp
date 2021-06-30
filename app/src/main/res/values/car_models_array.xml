@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="car_models_array">
+        <item>Ford</item>
+        <item>Audi</item>
+        <item>Nissan</item>
+        <item>Opel</item>
+        <item>Subaru</item>
+        <item>Ferrari</item>
+        <item>Mazda</item>
+    </string-array>
+</resources>

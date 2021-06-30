@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Remedy</string>
+    <string name="car_scan_button">ZESKANUJ SWÓJ POJAZD</string>
+    <string name="about">INFORMACJE O APLIKACJI</string>
+    <string name="register">Zarejestruj się</string>
+    <string name="login">Zaloguj się</string>
+    <string name="back_button">Wróć</string>
+    <string name="next_button">Dalej</string>
+    <string name="WIP_text">WORK IN PROGRESS</string>
+    <string name="general_info">
+        Aplikacja REMEDY powstała z myślą o każdym kierowcy.
+        Remedy pozwoli na szybkie zeskanowanie i rozpoznanie powierzchni pod pokrywą silnika, czyli mówiąc potocznie \"pod maską\".
+        Wykorzystując technologię ARCore, rozszerzającą nasze spojrzenie na świat można w łatwy sposób zidentyfikować każdy komponent silnika.
+        Aplikację można wykorzystać zarówno do nauki jak i użyć w przypadku chęci wymiany odpowiednich płynów takich jak, olej, płyn do spryskiwaczy lub płyn do chłodnicy.
+        Ponadto aplikacja ułatwi wykonywanie tych czynności, wyświetlając informacje niezbędne do poprawnego przejścia przez cały proces.
+    </string>
+    <string name="receiving_group">
+        Aplikacja przeznaczona jest dla osób posiadających samochód, lub też dla osób którzy mają z nimi styczność w życiu codziennym.
+        Użytkownik w bardzo prosty sposób jest w stanie rozpoznać co dokładnie kryje się pod maską samochodu. W dzisiejszych czasach
+        powstają najróżniejsze układy komponentów na które składa się obszar pod pokrywą silnika. Aplikacja REMEDY przychodzi z ratunkiem
+        i tym samym oszczędza niezliczone ilości minut przeznaczonych na szukaniu.
+    </string>
+    <string name="app_development">Plany rozwojowe aplikacji nie zamykają jej funkcjonalności na skanowaniu obszarów pod pokrywami różnych silników, w przyszłości aplikacja
+        REMEDY będzie pozwalała jej użytkownikowi na rozpoznawanie całych kokpitów czy też desek rozdzielczych. Rozwiązanie to może okazać się niezwykle przydatne
+        w przypadku starych modeli samochodów. Często instrukcje obsługi do tego typu pojazdów są nieosiągalne a rozszyfrowanie niektórych przycisków potrafi być niezwykle uciążliwe.
+        Następną funkjonalnością aplikacji REMEDY będzie wyświetlanie, części zamiennych uszkodzonego modułu pod pokrywą silnika, możliwość sprawdzenia cen płynów eksploatacyjnych.
+    </string>
+    <string name="author">Autor REMEDY: Witkor Pink</string>
+    <string name="ford_text">Ford</string>
+    <string name="car_select_text">Wybierz markę pojazdu, a następnie jego model...</string>
+    <string name="audi_text">Audi</string>
+    <string name="nissan_text">Nissan</string>
+    <string name="googleAuth">Zaloguj się przez google</string>
+    <string name="choose_mark">Wybierz markę: </string>
+    <string name="choose_model">Wybierz model: </string>
+</resources>

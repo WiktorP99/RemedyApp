@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="audi_array">
+        <item>TT</item>
+        <item>A1</item>
+        <item>A2</item>
+        <item>A3</item>
+        <item>A4</item>
+        <item>A5</item>
+        <item>A6</item>
+        <item>A7</item>
+        <item>A8</item>
+        <item>Q2</item>
+<!--        <item>Q3</item>-->
+<!--        <item>Q4</item>-->
+<!--        <item>Q5</item>-->
+<!--        <item>Q6</item>-->
+<!--        <item>Q6</item>-->
+<!--        <item>Q7</item>-->
+<!--        <item>Q8</item>-->
+    </string-array>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="infos_array">
+        <item>Informacje ogólne</item>
+        <item>Grupa odbiorcza</item>
+        <item>Rozwój aplikacji</item>
+        <item>Autor</item>
+    </string-array>
+</resources>

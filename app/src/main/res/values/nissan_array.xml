@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nisssan_array">
+        <item>Almea</item>
+        <item>Bluebird</item>
+        <item>Cube</item>
+        <item>Frontier</item>
+        <item>GT-R</item>
+        <item>Interstar</item>
+        <item>Juke</item>
+        <item>King Cab</item>
+        <item>Kubistar</item>
+        <item>Laurel</item>
+        <item>Leaf</item>
+        <item>Micra</item>
+<!--        <item>Murano</item>-->
+<!--        <item>Note</item>-->
+<!--        <item>Primera</item>-->
+<!--        <item>Pulsar</item>-->
+<!--        <item>Qashqai</item>-->
+    </string-array>
+</resources>
