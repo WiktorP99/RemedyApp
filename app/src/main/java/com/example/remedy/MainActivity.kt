@@ -18,9 +18,15 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+
+
+
 lateinit var mGoogleSignInClient: GoogleSignInClient
 private val RC_SIGN_IN = 9001
     @RequiresApi(Build.VERSION_CODES.O)
@@ -36,6 +42,11 @@ private val RC_SIGN_IN = 9001
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val database = Firebase.database
+        val myRef = database.getReference("message")
+
+        myRef.setValue("Hello, World!")
 
         val appInformationButton = findViewById<Button>(R.id.main_appInfoButton)
         val carScanButton = findViewById<Button>(R.id.main_scanYourCarButton)
