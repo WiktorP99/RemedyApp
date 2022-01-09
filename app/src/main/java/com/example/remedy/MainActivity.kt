@@ -4,24 +4,30 @@ import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.util.Log
 import android.widget.Button
-import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
 
+
 class MainActivity : AppCompatActivity() {
+
+private lateinit var auth: FirebaseAuth
 lateinit var mGoogleSignInClient: GoogleSignInClient
+
 private val RC_SIGN_IN = 9001
     @RequiresApi(Build.VERSION_CODES.O)
     fun intentMaker(button: Button, classs: Class<*>?){
@@ -36,6 +42,12 @@ private val RC_SIGN_IN = 9001
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        FirebaseAuth.getInstance().useEmulator("10.0.2.2", 9099);
+        //auth = Firebase.aith
+        val database = Firebase.database
+        val myRef = database.getReference("message")
+
+        myRef.setValue("Hello, World!")
 
         val appInformationButton = findViewById<Button>(R.id.main_appInfoButton)
         val carScanButton = findViewById<Button>(R.id.main_scanYourCarButton)

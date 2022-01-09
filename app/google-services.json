@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "156991665561",
+    "firebase_url": "https://remedy-db-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "remedy-db",
+    "storage_bucket": "remedy-db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156991665561:android:5c826ca8773db698c34f08",
+        "android_client_info": {
+          "package_name": "com.example.remedy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156991665561-76cqnq8mrppicoug9em5lunbgbb1d1gc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqfeuTTjErVMysXXCvcI9Gi1PIURlNruk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156991665561-76cqnq8mrppicoug9em5lunbgbb1d1gc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156991665561:android:5e5681e84662e6ccc34f08",
+        "android_client_info": {
+          "package_name": "com.wp.remedyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156991665561-76cqnq8mrppicoug9em5lunbgbb1d1gc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqfeuTTjErVMysXXCvcI9Gi1PIURlNruk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156991665561-76cqnq8mrppicoug9em5lunbgbb1d1gc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
