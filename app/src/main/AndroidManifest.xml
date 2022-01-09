@@ -15,14 +15,15 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LogInActivity" />
         <activity android:name=".CarScanActivity" />
-        <activity android:name=".AppInfoActivity">
+        <activity android:name=".AppInfoActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <!-- -->
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
