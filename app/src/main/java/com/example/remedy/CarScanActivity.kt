@@ -35,7 +35,6 @@ class CarScanActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
         carModelSpinner = findViewById(R.id.carScan_modelChoose_spinner)
         textView = findViewById<TextView>(R.id.car_scan_workInProgress_textView)
 
-
         val carChooseAdapter = ArrayAdapter.createFromResource(
             this,
             R.array.car_models_array,
@@ -66,7 +65,6 @@ class CarScanActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
             vib.vibrate(VibrationEffect.createOneShot(70, VibrationEffect.DEFAULT_AMPLITUDE))
             startActivity(intent)
         }
-
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -129,7 +127,6 @@ class CarScanActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
                     carModelSpinner.adapter = adapter
                     carModelSpinner.onItemSelectedListener = this
                 }
-
             }
             "Subaru" -> {
                 val subaruAdapter = ArrayAdapter.createFromResource(
