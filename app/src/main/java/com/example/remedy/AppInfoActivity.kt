@@ -1,6 +1,7 @@
 package com.example.remedy
 
 import android.content.Context
+import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,20 @@ import androidx.annotation.RequiresApi
 
 class AppInfoActivity : AppCompatActivity(), AdapterView.OnItemClickListener,
     AdapterView.OnItemSelectedListener {
+
+    fun intentMaker(button: Button, classs: Class<*>?){
+        val intent = Intent(this, classs )
+        val vib = (getSystemService(Context.VIBRATOR_SERVICE) as Vibrator)
+        if (Build.VERSION.SDK_INT >= 26) {
+            vib.vibrate(VibrationEffect.createOneShot(70, VibrationEffect.DEFAULT_AMPLITUDE))
+        } else {
+            vib.vibrate(200)
+        }
+        val mp = MediaPlayer.create(this, R.raw.sample)
+        mp.start()
+        startActivity(intent)
+    }
+
     lateinit var spinner: Spinner
     lateinit var textView: TextView
     @RequiresApi(Build.VERSION_CODES.O)
@@ -42,11 +57,8 @@ class AppInfoActivity : AppCompatActivity(), AdapterView.OnItemClickListener,
 
 
         }
-        button.setOnClickListener()
-        {
-            vib.vibrate(VibrationEffect.createOneShot(50, VibrationEffect.DEFAULT_AMPLITUDE))
-            mp.start()
-            finish()
+        button.setOnClickListener{
+            intentMaker(button, MainActivity::class.java)
         }
     }
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {

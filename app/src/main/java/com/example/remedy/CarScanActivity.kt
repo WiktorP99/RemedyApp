@@ -11,148 +11,66 @@ import android.os.Vibrator
 import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
+import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.activity_car_scan.*
 
 class CarScanActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
-    lateinit var carChooseSpinner: Spinner
-    lateinit var carModelSpinner: Spinner
 
     lateinit var textView: TextView
+
+    fun intentMaker(button: Button, classs: Class<*>?){
+        val intent = Intent(this, classs )
+        val vib = (getSystemService(Context.VIBRATOR_SERVICE) as Vibrator)
+        if (Build.VERSION.SDK_INT >= 26) {
+            vib.vibrate(VibrationEffect.createOneShot(70, VibrationEffect.DEFAULT_AMPLITUDE))
+        } else {
+            vib.vibrate(200)
+        }
+        val mp = MediaPlayer.create(this, R.raw.sample)
+        mp.start()
+        startActivity(intent)
+    }
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_car_scan)
 
+        val brakeFluidButton = findViewById<Button>(R.id.Brake_fluid_btn)
+        val oilLevelButton = findViewById<Button>(R.id.Oil_level_btn)
+        val windshieldWasherFluidButton = findViewById<Button>(R.id.windshield_washer_fluid_btn)
+        val oilRefillButton = findViewById<Button>(R.id.Oil_refill_btn)
+        val coolingFluidButton = findViewById<Button>(R.id.Cooling_fluid_btn)
         val backButton = findViewById<Button>(R.id.carScan_backButton)
-        val nextButton = findViewById<Button>(R.id.carScan_nextButton)
-        val text = findViewById<TextView>(R.id.car_scan_workInProgress_textView)
-        text.setText("CAR SCAN, WORK IN PROGRESS").toString()
-        val textViewValue = text.text
-        val mp = MediaPlayer.create(this, R.raw.sample)
-        val vib = (getSystemService(Context.VIBRATOR_SERVICE) as Vibrator)
-        val intent = Intent(this, ArCoreActivity::class.java )
 
-        carChooseSpinner = findViewById(R.id.carScan_carChoose_spinner)
-        carModelSpinner = findViewById(R.id.carScan_modelChoose_spinner)
-        textView = findViewById<TextView>(R.id.car_scan_workInProgress_textView)
-
-        val carChooseAdapter = ArrayAdapter.createFromResource(
-            this,
-            R.array.car_models_array,
-            R.layout.spinner_text_view
-        ).also { adapter ->
-            adapter.setDropDownViewResource(R.layout.spinner_dropdown_text_view)
-            carChooseSpinner.adapter = adapter
-            carChooseSpinner.onItemSelectedListener = this
-        }
-        val modelChooseAdapter = ArrayAdapter.createFromResource(
-            this,
-            R.array.car_models_array,
-            R.layout.spinner_text_view
-        ).also { adapter ->
-            adapter.setDropDownViewResource(R.layout.spinner_dropdown_text_view)
-            carModelSpinner.adapter = adapter
-            carModelSpinner.onItemSelectedListener = this
+        brakeFluidButton.setOnClickListener{
+            intentMaker(brakeFluidButton, BrakeFluidActivity::class.java)
         }
 
-        backButton.setOnClickListener()
-        {
-            mp.start()
-            vib.vibrate(VibrationEffect.createOneShot(50, VibrationEffect.DEFAULT_AMPLITUDE))
-            finish()
+        oilLevelButton.setOnClickListener{
+            intentMaker(oilLevelButton, OilLevelActivity::class.java)
         }
-        nextButton.setOnClickListener{
-            mp.start()
-            vib.vibrate(VibrationEffect.createOneShot(70, VibrationEffect.DEFAULT_AMPLITUDE))
-            startActivity(intent)
+
+        windshieldWasherFluidButton.setOnClickListener{
+            intentMaker(windshieldWasherFluidButton, WindshieldWasherFluidActivity::class.java)
         }
+
+        oilRefillButton.setOnClickListener{
+            intentMaker(oilRefillButton, OilRefillActivity::class.java)
+        }
+        coolingFluidButton.setOnClickListener{
+            intentMaker(coolingFluidButton, CoolingFluidActivity::class.java)
+        }
+         backButton.setOnClickListener{
+             intentMaker(backButton, MainActivity::class.java)
+         }
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        val carChooseValue = carChooseSpinner.selectedItem.toString()
-        val mp = MediaPlayer.create(this, R.raw.sample)
 
-        when (carChooseValue) {
-            "Ford" -> {
-                val fordAdapter = ArrayAdapter.createFromResource(
-                    this,
-                    R.array.ford_array,
-                    R.layout.spinner_text_view
-                ).also { adapter ->
-                    adapter.setDropDownViewResource(R.layout.spinner_dropdown_text_view)
-                    carModelSpinner.adapter = adapter
-                    carModelSpinner.onItemSelectedListener = this
-                }
-            }
-            "Audi" -> {
-                val fordAdapter = ArrayAdapter.createFromResource(
-                    this,
-                    R.array.audi_array,
-                    R.layout.spinner_text_view
-                ).also { adapter ->
-                    adapter.setDropDownViewResource(R.layout.spinner_dropdown_text_view)
-                    carModelSpinner.adapter = adapter
-                    carModelSpinner.onItemSelectedListener = this
-                }
-            }
-            "Nissan" -> {
-                val fordAdapter = ArrayAdapter.createFromResource(
-                    this,
-                    R.array.nisssan_array,
-                    R.layout.spinner_text_view
-                ).also { adapter ->
-                    adapter.setDropDownViewResource(R.layout.spinner_dropdown_text_view)
-                    carModelSpinner.adapter = adapter
-                    carModelSpinner.onItemSelectedListener = this
-                }
 
-            }
-            "Mazda" -> {
-                val mazdaAdapter = ArrayAdapter.createFromResource(
-                    this,
-                    R.array.mazda_array,
-                    R.layout.spinner_text_view
-                ).also { adapter ->
-                    adapter.setDropDownViewResource(R.layout.spinner_dropdown_text_view)
-                    carModelSpinner.adapter = adapter
-                    carModelSpinner.onItemSelectedListener = this
-                }
-            }
-            "Ferrari" -> {
-                val ferrariAdapter = ArrayAdapter.createFromResource(
-                    this,
-                    R.array.ferrari_array,
-                    R.layout.spinner_text_view
-                ).also { adapter ->
-                    adapter.setDropDownViewResource(R.layout.spinner_dropdown_text_view)
-                    carModelSpinner.adapter = adapter
-                    carModelSpinner.onItemSelectedListener = this
-                }
-            }
-            "Subaru" -> {
-                val subaruAdapter = ArrayAdapter.createFromResource(
-                    this,
-                    R.array.subaru_array,
-                    R.layout.spinner_text_view
-                ).also { adapter ->
-                    adapter.setDropDownViewResource(R.layout.spinner_dropdown_text_view)
-                    carModelSpinner.adapter = adapter
-                    carModelSpinner.onItemSelectedListener = this
-                }
-            }
-            "Opel" -> {
-                val opelAdapter = ArrayAdapter.createFromResource(
-                    this,
-                    R.array.opel_array,
-                    R.layout.spinner_text_view
-                ).also { adapter ->
-                    adapter.setDropDownViewResource(R.layout.spinner_dropdown_text_view)
-                    carModelSpinner.adapter = adapter
-                    carModelSpinner.onItemSelectedListener = this
-                }
-            }
         }
-    }
-    override fun onNothingSelected(parent: AdapterView<*>?) {
+
+    override fun onNothingSelected(p0: AdapterView<*>?) {
         TODO("Not yet implemented")
     }
 }

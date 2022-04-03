@@ -7,6 +7,12 @@
     <string name="back_button">Wróć</string>
     <string name="next_button">Dalej</string>
     <string name="WIP_text">WORK IN PROGRESS</string>
+    <string name="Cooling_fluid_btn">PŁYN CHŁODNICZY</string>
+    <string name="Oil_level_btn">POZIOM OLEJU</string>
+    <string name="Oil_refill_btn">WLEW OLEJU</string>
+    <string name="Windshield_washer_fluid_btn">PŁYN DO SPRYSKIWACZY</string>
+    <string name="Brake_fluid">PŁYN HAMULCOWY</string>
+    <string name="Choose_part_text"> Proszę wybrać odpowiednią część </string>
     <string name="general_info">
         Aplikacja REMEDY powstała z myślą o każdym kierowcy.
         Remedy pozwoli na szybkie zeskanowanie i rozpoznanie powierzchni pod pokrywą silnika, czyli mówiąc potocznie \"pod maską\".

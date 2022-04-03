@@ -8,8 +8,10 @@
     tools:context=".MainActivity">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout2"
         android:layout_width="392dp"
-        android:layout_height="648dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,8 +34,8 @@
     <ImageView
         android:id="@+id/main_logoImage"
         android:layout_width="250dp"
-        android:layout_height="207dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         android:contentDescription="TODO"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -44,8 +46,11 @@
 
     <Button
         android:id="@+id/main_scanYourCarButton"
-        android:layout_width="301dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         android:background="@drawable/button_background"
         android:fontFamily="@font/mitr_medium"
         android:gravity="center_vertical"
@@ -60,79 +65,22 @@
 
     <Button
         android:id="@+id/main_appInfoButton"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         android:background="@drawable/button_background"
         android:fontFamily="@font/mitr_medium"
         android:gravity="center_vertical"
         android:text="@string/about"
         android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_scanYourCarButton"
+        app:layout_constraintTop_toBottomOf="@+id/main_logoImage"
         tools:ignore="RtlCompat" />
 
-
-    <Button
-        android:id="@+id/main_googleLoginButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:background="@drawable/button_background"
-        android:drawablePadding="8dp"
-        android:fontFamily="@font/mitr_medium"
-        android:padding="8dp"
-        android:text="@string/googleAuth"
-        android:textAllCaps="false"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/main_googleLoginButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_appInfoButton">
-
-        <Button
-            android:id="@+id/main_registerButton"
-            android:layout_width="145dp"
-            android:layout_height="50dp"
-            android:background="@drawable/button_background"
-            android:fontFamily="@font/mitr_medium"
-            android:gravity="center_vertical"
-            android:text="@string/register"
-            android:textAlignment="center"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="RtlCompat" />
-
-        <Button
-            android:id="@+id/main_logInButton"
-            android:layout_width="132dp"
-            android:layout_height="50dp"
-            android:background="@drawable/button_background"
-            android:fontFamily="@font/mitr_medium"
-            android:gravity="center_vertical"
-            android:text="@string/login"
-            android:textAlignment="center"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="RtlCompat" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

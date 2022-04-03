@@ -1,6 +1,5 @@
 package com.example.remedy
 
-import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
@@ -19,12 +18,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -37,7 +33,11 @@ private val RC_SIGN_IN = 9001
     fun intentMaker(button: Button, classs: Class<*>?){
         val intent = Intent(this, classs )
         val vib = (getSystemService(Context.VIBRATOR_SERVICE) as Vibrator)
-        vib.vibrate(VibrationEffect.createOneShot(70, VibrationEffect.DEFAULT_AMPLITUDE))
+        if (Build.VERSION.SDK_INT >= 26) {
+            vib.vibrate(VibrationEffect.createOneShot(70, VibrationEffect.DEFAULT_AMPLITUDE))
+        } else {
+            vib.vibrate(200)
+        }
         val mp = MediaPlayer.create(this, R.raw.sample)
         mp.start()
         startActivity(intent)
@@ -58,8 +58,8 @@ private val RC_SIGN_IN = 9001
 
         val appInformationButton = findViewById<Button>(R.id.main_appInfoButton)
         val carScanButton = findViewById<Button>(R.id.main_scanYourCarButton)
-        val registerButton = findViewById<Button>(R.id.main_registerButton)
-        val loginButton = findViewById<Button>(R.id.main_logInButton)
+/*        val registerButton = findViewById<Button>(R.id.main_registerButton)
+        val loginButton = findViewById<Button>(R.id.main_logInButton)*/
 
         carScanButton.setOnClickListener{
             intentMaker(carScanButton, CarScanActivity::class.java)
@@ -67,12 +67,12 @@ private val RC_SIGN_IN = 9001
         appInformationButton.setOnClickListener{
             intentMaker(carScanButton, AppInfoActivity::class.java)
         }
-        registerButton.setOnClickListener{
+/*        registerButton.setOnClickListener{
             intentMaker(carScanButton, RegisterActivity::class.java)
         }
         loginButton.setOnClickListener{
             intentMaker(carScanButton, LogInActivity::class.java)
-        }
+        }*/
 
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -82,23 +82,23 @@ private val RC_SIGN_IN = 9001
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
 
-        main_googleLoginButton.setOnClickListener {
+/*        main_googleLoginButton.setOnClickListener {
             val mp = MediaPlayer.create(this, R.raw.sample)
             mp.start()
-            signIn()
+            signIn()*/
 
     }
 
   }
 
-    override fun onStart() {
+/*    override fun onStart() {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
         updateUI(currentUser)
-    }
+    }*/
 
-    private fun updateUI(user: FirebaseUser?) {
+/*    private fun updateUI(user: FirebaseUser?) {
         if(user == null)
         {
             Log.w(TAG, "User is null, net going to navigate")
@@ -106,15 +106,15 @@ private val RC_SIGN_IN = 9001
         }
         startActivity(Intent(this, CarScanActivity::class.java))
         finish()
-    }
+    }*/
 
-    private fun signIn() {
+/*    private fun signIn() {
         val signInIntent = mGoogleSignInClient.signInIntent
         startActivityForResult(
             signInIntent, RC_SIGN_IN
         )
-    }
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    }*/
+/*    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
@@ -130,7 +130,7 @@ private val RC_SIGN_IN = 9001
                 Log.w(TAG, "Google sign in failed", e)
             }
         }
-    }
+    }*/
     private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
         try {
             val account = completedTask.getResult(
@@ -163,7 +163,7 @@ private val RC_SIGN_IN = 9001
         }
     }
 
-    private fun firebaseAuthWithGoogle(idToken: String) {
+/*    private fun firebaseAuthWithGoogle(idToken: String) {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
@@ -178,9 +178,9 @@ private val RC_SIGN_IN = 9001
                     updateUI(null)
                 }
             }
-    }
+    }*/
 
-    private fun signOut() {
+/*    private fun signOut() {
         mGoogleSignInClient.signOut()
             .addOnCompleteListener(this) {
                 // Update your UI here
@@ -191,6 +191,4 @@ private val RC_SIGN_IN = 9001
             .addOnCompleteListener(this) {
                 // Update your UI here
             }
-    }
-
-}
+    }*/
