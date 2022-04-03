@@ -39,4 +39,7 @@
     <string name="googleAuth">Zaloguj się przez google</string>
     <string name="choose_mark">Wybierz markę: </string>
     <string name="choose_model">Wybierz model: </string>
+    <string name="cooling_fluid_credentials">Płyn chłodniczy jest trzecim najważniejszym płynem w samochodzie zaraz obok oleju silnikowego oraz przekładniowego. Jego zadaniem jest
+    utrzymanie odpowiedniej temperatury silnika który może dzięki optymalnej pracy zachować właściwe parametry pracy. Niedobór płynu chłodniczego może doprowadzić do przegrzania
+        oraz zatarcia silnika. </string>
 </resources>
