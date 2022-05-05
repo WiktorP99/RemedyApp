@@ -3,6 +3,8 @@
     package="com.example.remedy">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.ar" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".CoolingFluidScanning"
+            android:exported="true" />
         <activity
             android:name=".WindshieldWasherFluidActivity"
             android:exported="true" />
@@ -26,7 +31,6 @@
         <activity
             android:name=".CoolingFluidActivity"
             android:exported="true" />
-
         <activity android:name=".ArCoreActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".AppInfoActivity" />
@@ -41,11 +45,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity> <!--  -->
-
-
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <meta-data android:name="com.google.ar.core" android:value="required" />
     </application>
 
 </manifest>

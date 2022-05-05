@@ -12,7 +12,7 @@ import android.widget.Button
 
 class CoolingFluidActivity : AppCompatActivity() {
 
-    fun intentMaker(button: Button, classs: Class<*>?){
+    private fun intentMaker(button: Button, classs: Class<*>?){
         val intent = Intent(this, classs )
         val vib = (getSystemService(Context.VIBRATOR_SERVICE) as Vibrator)
         if (Build.VERSION.SDK_INT >= 26) {
@@ -30,9 +30,13 @@ class CoolingFluidActivity : AppCompatActivity() {
         setContentView(R.layout.activity_cooling_fluid)
 
         val backButton = findViewById<Button>(R.id.cooling_fluid_backButton)
+        val carScanButton = findViewById<Button>(R.id.cooling_fluid_carscan)
 
         backButton.setOnClickListener{
             intentMaker(backButton, CarScanActivity::class.java)
+        }
+        carScanButton.setOnClickListener{
+            intentMaker(carScanButton, CoolingFluidScanning::class.java)
         }
     }
 }

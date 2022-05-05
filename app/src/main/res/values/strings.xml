@@ -5,6 +5,7 @@
     <string name="register">Zarejestruj się</string>
     <string name="login">Zaloguj się</string>
     <string name="back_button">Wróć</string>
+    <string name="scan_button">Skanuj pojazd</string>
     <string name="next_button">Dalej</string>
     <string name="WIP_text">WORK IN PROGRESS</string>
     <string name="Cooling_fluid_btn">PŁYN CHŁODNICZY</string>
@@ -31,7 +32,7 @@
         w przypadku starych modeli samochodów. Często instrukcje obsługi do tego typu pojazdów są nieosiągalne a rozszyfrowanie niektórych przycisków potrafi być niezwykle uciążliwe.
         Następną funkjonalnością aplikacji REMEDY będzie wyświetlanie, części zamiennych uszkodzonego modułu pod pokrywą silnika, możliwość sprawdzenia cen płynów eksploatacyjnych.
     </string>
-    <string name="author">Autor REMEDY: Witkor Pink</string>
+    <string name="author">Autor REMEDY: Wiktor Pink</string>
     <string name="ford_text">Ford</string>
     <string name="car_select_text">Wybierz markę pojazdu, a następnie jego model...</string>
     <string name="audi_text">Audi</string>
@@ -42,4 +43,6 @@
     <string name="cooling_fluid_credentials">Płyn chłodniczy jest trzecim najważniejszym płynem w samochodzie zaraz obok oleju silnikowego oraz przekładniowego. Jego zadaniem jest
     utrzymanie odpowiedniej temperatury silnika który może dzięki optymalnej pracy zachować właściwe parametry pracy. Niedobór płynu chłodniczego może doprowadzić do przegrzania
         oraz zatarcia silnika. </string>
+
+    <string name="exploatation">Eksploatacja</string>
 </resources>
