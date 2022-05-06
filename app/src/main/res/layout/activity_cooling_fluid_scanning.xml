@@ -8,6 +8,25 @@
     tools:context=".RegisterActivity">
 
     <Button
+        android:id="@+id/check_for_ar_core"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/mitr_medium"
+        android:gravity="center_vertical"
+        android:text="@string/back_button"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.116"
+        tools:ignore="RtlCompat" />
+
+    <Button
         android:id="@+id/cooling_fluid_scanning_backButton"
         android:layout_width="100dp"
         android:layout_height="40dp"
@@ -25,6 +44,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="RtlCompat" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
