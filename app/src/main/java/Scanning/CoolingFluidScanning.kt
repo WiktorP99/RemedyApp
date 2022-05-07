@@ -1,8 +1,10 @@
 package com.example.remedy
 
+import android.app.VoiceInteractor
 import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.media.MediaPlayer
 import android.os.*
 import androidx.appcompat.app.AppCompatActivity
@@ -10,22 +12,31 @@ import android.util.Log
 import android.view.KeyCharacterMap
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.isVisible
 import com.example.remedy.CoolingFluidActivity
 import com.example.remedy.R
-import com.google.ar.core.ArCoreApk
-import com.google.ar.core.AugmentedImageDatabase
+import com.google.ar.core.*
+import com.google.ar.core.exceptions.UnavailableUserDeclinedInstallationException
+import com.google.ar.sceneform.FrameTime
+import com.google.ar.sceneform.ux.ArFragment
+import java.Helpers.CameraPermissionHelper
+import java.io.IOException
 import com.google.ar.core.Config
 import com.google.ar.core.Session
-import com.google.ar.core.exceptions.UnavailableUserDeclinedInstallationException
-import java.Helpers.CameraPermissionHelper
+import com.google.ar.core.Pose
+import com.google.ar.core.TrackingState
+import TmpClass
 
-class CoolingFluidScanning : AppCompatActivity()
-{
+
+
+
+class CoolingFluidScanning : AppCompatActivity() {
     private var mSession: Session? = null
     private var mUserRequestedInstall = true
-
+    private var arFragment: TmpClass? = null
+    private var textView: TextView? = null
 
     private fun intentMaker(button: Button, classs: Class<*>?){
         val intent = Intent(this, classs )
@@ -38,6 +49,45 @@ class CoolingFluidScanning : AppCompatActivity()
         val mp = MediaPlayer.create(this, R.raw.sample)
         mp.start()
         startActivity(intent)
+    }
+
+
+
+/*        private fun onUpdate(frameTime: FrameTime) {
+            val frame = arFragment?.arSceneView?.arFrame
+            val images = frame!!.getUpdatedTrackables(
+                AugmentedImage::class.java
+            )
+            for (image in images) {
+                if (image.trackingMethod == AugmentedImage.TrackingMethod.FULL_TRACKING) {
+                    if (image.name == "cooling_fluid.jpg") {
+                        textView?.text  = "IMAGE IS VISIBLE"
+                    }
+                }
+            }
+        }*/
+
+    private fun onUpdate() {
+        val frame: Frame? = arFragment?.getArSceneView()?.getArFrame()
+
+        val camera = frame?.camera
+
+        if (camera != null) {
+            if (camera.trackingState === TrackingState.TRACKING) {
+                val CameraPose = camera.displayOrientedPose
+            }
+        }
+    }
+
+    fun loadDB(session: Session?, config: Config) {
+        val dbStream =
+            this.assets.open("imgs.imgdb")
+        try {
+            val aid = AugmentedImageDatabase.deserialize(session, dbStream)
+            config.augmentedImageDatabase = aid
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
     }
 
     fun isARCoreSupportedAndUpToDate(): Boolean {
@@ -84,11 +134,33 @@ class CoolingFluidScanning : AppCompatActivity()
                             .show()
                         // Success: Safe to create the AR session.
                         mSession = Session(this.applicationContext)
+                        val config = Config(mSession)
+
+                        val dbStream =
+                            this.assets.open("imgs.imgdb")
+                        try {
+                            val aid = AugmentedImageDatabase.deserialize(mSession, dbStream)
+                            config.augmentedImageDatabase = aid
+                        } catch (e: IOException) {
+                            e.printStackTrace()
+                        }
+
+                        arFragment = supportFragmentManager
+                            .findFragmentById(R.id.arFragment) as TmpClass?
+                        textView = findViewById(R.id.txtView)
+                        arFragment!!.arSceneView.scene.addOnUpdateListener { frameTime: FrameTime ->
+                            arFragment!!.onUpdate(frameTime)
+                            onUpdate(frameTime)
+                        /*onUpdate(
+                                frameTime
+                            )*/
+                        }
                     }
                     ArCoreApk.InstallStatus.INSTALL_REQUESTED -> {
                         Toast.makeText(this, "UNINSTALLED ", Toast.LENGTH_LONG)
                             .show()
                         mUserRequestedInstall = false
+
                         return
                     }
                 }
@@ -119,25 +191,17 @@ class CoolingFluidScanning : AppCompatActivity()
         }
     }
 
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cooling_fluid_scanning)
 
-        val backButton = findViewById<Button>(R.id.cooling_fluid_scanning_backButton)
+        //val backButton = findViewById<Button>(R.id.cooling_fluid_scanning_backButton)
         val startCameraARButton = findViewById<Button>(R.id.check_for_ar_core)
 
-        startCameraARButton.isVisible
-        backButton.setOnClickListener{
+/*        backButton.setOnClickListener{
             intentMaker(backButton, CoolingFluidActivity::class.java)
-        }
-
-/*        val imageDatabase = this.assets.open("cooling_fluid.jpg").use {
-            //AugmentedImageDatabase.deserialize(session, it)
         }*/
+
 
         val availability = ArCoreApk.getInstance().checkAvailability(this)
 
