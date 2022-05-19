@@ -29,9 +29,9 @@ class OilRefillActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_oil_refill)
 
-        val backButton = findViewById<Button>(R.id.oil_level_backButton)
+        val backButton = findViewById<Button>(R.id.oil_refill_backButton)
         backButton.setOnClickListener{
-            intentMaker(backButton, CarScanActivity::class.java)
+            finish()
         }
     }
 }

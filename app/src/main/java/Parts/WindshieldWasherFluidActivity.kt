@@ -31,7 +31,7 @@ class WindshieldWasherFluidActivity : AppCompatActivity() {
 
         val backButton = findViewById<Button>(R.id.windshield_washer_backButton)
         backButton.setOnClickListener{
-            intentMaker(backButton, CarScanActivity::class.java)
+            finish()
         }
     }
 }

@@ -33,7 +33,7 @@ class CoolingFluidActivity : AppCompatActivity() {
         val carScanButton = findViewById<Button>(R.id.cooling_fluid_carscan)
 
         backButton.setOnClickListener{
-            intentMaker(backButton, CarScanActivity::class.java)
+            finish()
         }
         carScanButton.setOnClickListener{
             intentMaker(carScanButton, CoolingFluidScanning::class.java)

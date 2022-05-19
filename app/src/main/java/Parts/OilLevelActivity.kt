@@ -31,7 +31,7 @@ class OilLevelActivity : AppCompatActivity() {
 
         val backButton = findViewById<Button>(R.id.oil_level_backButton)
         backButton.setOnClickListener{
-            intentMaker(backButton, CarScanActivity::class.java)
+            finish()
         }
     }
 }

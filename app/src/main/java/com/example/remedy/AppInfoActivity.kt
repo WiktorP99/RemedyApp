@@ -58,7 +58,7 @@ class AppInfoActivity : AppCompatActivity(), AdapterView.OnItemClickListener,
 
         }
         button.setOnClickListener{
-            intentMaker(button, MainActivity::class.java)
+            finish()
         }
     }
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {

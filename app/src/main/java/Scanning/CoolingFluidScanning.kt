@@ -150,7 +150,7 @@ class CoolingFluidScanning : AppCompatActivity() {
                         textView = findViewById(R.id.txtView)
                         arFragment!!.arSceneView.scene.addOnUpdateListener { frameTime: FrameTime ->
                             arFragment!!.onUpdate(frameTime)
-                            onUpdate(frameTime)
+                            //onUpdate(frameTime)
                         /*onUpdate(
                                 frameTime
                             )*/

@@ -32,7 +32,7 @@ public class BrakeFluidActivity : AppCompatActivity() {
         val backButton = findViewById<Button>(R.id.brake_fluid_backButton)
 
         backButton.setOnClickListener{
-            intentMaker(backButton, CarScanActivity::class.java)
+            finish()
         }
     }
 }
