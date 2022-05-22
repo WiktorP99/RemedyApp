@@ -17,9 +17,11 @@
         tools:context=".RegisterActivity">
 
         <Button
-            android:id="@+id/cooling_fluid_backButton"
+            android:id="@+id/windshield_washer_fluid_backButton"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/button_background"
             android:fontFamily="@font/mitr_medium"
             android:gravity="center_vertical"
@@ -27,16 +29,19 @@
             android:textAlignment="center"
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/cooling_fluid_carscan"
-            app:layout_constraintHorizontal_bias="0.46"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.499"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/windshield_washer_fluid_carscan"
+            app:layout_constraintVertical_bias="0.0"
             tools:ignore="RtlCompat" />
 
         <Button
-            android:id="@+id/cooling_fluid_carscan"
+            android:id="@+id/windshield_washer_fluid_carscan"
             android:layout_width="200dp"
             android:layout_height="48dp"
-            android:layout_marginTop="172dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="32dp"
             android:background="@drawable/button_background"
             android:fontFamily="@font/mitr_medium"
             android:gravity="center_vertical"
@@ -45,9 +50,9 @@
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.838"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Exploatation"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
             app:layout_constraintVertical_bias="0.0"
             tools:ignore="RtlCompat" />
 
@@ -70,19 +75,34 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="378dp"
+            android:layout_width="400dp"
             android:layout_height="237dp"
-            android:layout_marginBottom="328dp"
             android:background="@drawable/text_view_style"
             android:padding="20px"
             android:text="@string/cooling_fluid_credentials"
-            android:textAlignment="viewStart"
+            android:textAlignment="textStart"
             android:textColor="#000"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/cooling_fluid_backButton"
+            app:layout_constraintBottom_toTopOf="@+id/Exploatation"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.484"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GeneralInformation" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="400dp"
+            android:layout_height="461dp"
+            android:background="@drawable/text_view_style"
+            android:padding="20px"
+            android:text="@string/cooling_fluid_exploitation"
+            android:textAlignment="textStart"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/Exploatation" />
 
         <TextView
             android:id="@+id/GeneralInformation"
@@ -94,8 +114,8 @@
             android:textAlignment="textStart"
             android:textColor="#000000"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/textView2"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cooling_fluid_textView" />
 
@@ -103,7 +123,6 @@
             android:id="@+id/Exploatation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="84dp"
             android:fontFamily="@font/mitr_medium"
             android:padding="22px"
             android:text="@string/exploatation"

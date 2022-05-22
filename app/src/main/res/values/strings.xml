@@ -14,6 +14,8 @@
     <string name="Windshield_washer_fluid_btn">PŁYN DO SPRYSKIWACZY</string>
     <string name="Brake_fluid">PŁYN HAMULCOWY</string>
     <string name="Choose_part_text"> Proszę wybrać odpowiednią część </string>
+    <string name="tfe_od_app_name" translation_description="Object Detection demo app [CHAR_LIMIT=40]">TFL Detect</string>
+    <string name="tfe_od_camera_error" translation_description="Error regarding camera support[CHAR_LIMIT=40]">This device doesn\'t support Camera2 API.</string>
     <string name="general_info">
         Aplikacja REMEDY powstała z myślą o każdym kierowcy.
         Remedy pozwoli na szybkie zeskanowanie i rozpoznanie powierzchni pod pokrywą silnika, czyli mówiąc potocznie \"pod maską\".
@@ -41,8 +43,19 @@
     <string name="choose_mark">Wybierz markę: </string>
     <string name="choose_model">Wybierz model: </string>
     <string name="cooling_fluid_credentials">Płyn chłodniczy jest trzecim najważniejszym płynem w samochodzie zaraz obok oleju silnikowego oraz przekładniowego. Jego zadaniem jest
-    utrzymanie odpowiedniej temperatury silnika który może dzięki optymalnej pracy zachować właściwe parametry pracy. Niedobór płynu chłodniczego może doprowadzić do przegrzania
+    utrzymanie odpowiedniej temperatury silnika który może dzięki optymalnej pracy zachować właściwe parametry. Niedobór płynu chłodniczego może doprowadzić do przegrzania
         oraz zatarcia silnika. </string>
+    <string name="cooling_fluid_exploitation">Płyn chłodniczy wraz z upływem czasu stopniowo traci swoje właściwości. Zaleca się wymianę płynu chłodniczego nie rzadziej niż co pięć lat.
+        Warto zajrzeć do instrukcji obsługi pojazdu i zapoznać się z zaleceniami producenta pojazdu. W przypadku gdy w zbiorniku na płyn chłodzący jest zauważalny jego deficyt, rodzi się pytanie a mianowicie,
+    czy płyny chłodzące można ze sobą mieszać. Ogólnie rzecz biorąc każdy płyn chłodniczy jest produkowany na bazie glikolu etylowego który jest substancją mieszalną, nie mniej jednak mieszanie tego typu płynów mimo iż jest możliwe
+     to nie jest zalecane. Mimo że baza płynu jest taka sama w przypadku większości marek to mają różne składy chemiczne oraz dodatki antykorozyjne. Po zmieszaniu różnych płynów chłodniczych może pogorszyć ich własności antykorozyjne.
+     W przypadku widocznego ubytku najlepszym rozwiązaniem będzie dolanie wody destylowanej.</string>
+
+    <string name="windshield_washer_fluid_credentials">Płyn do spryskiwaczy jest dość istotnym elementem, który znacząco wpływa na komfort jazdy samochodem. Pozwala on na wyczyszczenie szyby podczas prowadzenia pojazdu.</string>
+    <string name="windshield_washer_fluid_exploitation">Płyn do spryskiwaczy należy regularnie uzupełniać oraz sprawdzać jego poziom. Uzupełnianie płynu jest niezwykle proste, należy po prostu dolać odpowiednią ilość tak żeby jego poziom
+         znajdował się pomiędzy minimum a maksimum. Istotną kwestią do porusznia w temacie płynu do spryskiwaczy jest jego odpowiednie dobranie w zależności od panujacych warunków na drodze. W przypadku zimy należy wybrać płyn
+         przeznaczony do takich właśnie warunków zazwyczaj na etykiecie widnieje napis "zimowy". W przypadku lata lub cieplejszych pór roku dobrym wyborem będzie płyn letni. Wlanie letniego płynu w zimę może skutkować
+         zamarnięciem cieczy w zbiorniku.</string>
 
     <string name="exploatation">Eksploatacja</string>
 </resources>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.remedy">
-
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera.ar" />
@@ -30,6 +29,10 @@
             android:exported="true" />
         <activity
             android:name=".CoolingFluidActivity"
+            android:exported="true" />
+        <activity android:name="detection.CameraActivity"
+            android:exported="true" />
+        <activity android:name="detection.DetectorActivity"
             android:exported="true" />
         <activity android:name=".ArCoreActivity" />
         <activity android:name=".RegisterActivity" />

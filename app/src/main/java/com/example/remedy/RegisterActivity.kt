@@ -16,7 +16,6 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-
         val backButton = findViewById<Button>(R.id.arcore_backButton)
         val text = findViewById<TextView>(R.id.arcore_workInProgress_textView)
         val mp = MediaPlayer.create(this, R.raw.sample)

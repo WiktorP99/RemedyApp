@@ -34,7 +34,6 @@ class CarScanActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_car_scan)
-
         val brakeFluidButton = findViewById<Button>(R.id.Brake_fluid_btn)
         val oilLevelButton = findViewById<Button>(R.id.Oil_level_btn)
         val windshieldWasherFluidButton = findViewById<Button>(R.id.windshield_washer_fluid_btn)

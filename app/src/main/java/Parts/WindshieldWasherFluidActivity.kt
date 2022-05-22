@@ -29,7 +29,7 @@ class WindshieldWasherFluidActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_windshield_washer_fluid)
 
-        val backButton = findViewById<Button>(R.id.windshield_washer_backButton)
+        val backButton = findViewById<Button>(R.id.windshield_washer_fluid_backButton)
         backButton.setOnClickListener{
             finish()
         }
