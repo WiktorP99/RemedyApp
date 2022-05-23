@@ -19,6 +19,7 @@ package detection;
 import android.Manifest;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.hardware.camera2.CameraAccessException;
@@ -38,6 +39,7 @@ import android.util.Size;
 import android.view.Surface;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -48,6 +50,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.remedy.BrakeFluidActivity;
 import com.example.remedy.R;
 
 import java.nio.ByteBuffer;
@@ -77,7 +80,7 @@ public abstract class CameraActivity extends AppCompatActivity
   private int yRowStride;
   private Runnable postInferenceCallback;
   private Runnable imageConverter;
-
+  private Button button;
   private LinearLayout bottomSheetLayout;
   private LinearLayout gestureLayout;
   /*private BottomSheetBehavior<LinearLayout> sheetBehavior;*/
@@ -98,6 +101,13 @@ public abstract class CameraActivity extends AppCompatActivity
     Toolbar toolbar = findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
     getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+    button = findViewById(R.id.activity_scanning_back_button);
+    button.setOnClickListener(new View.OnClickListener() {
+      public void onClick(View v) {
+        finish();
+      }
+    });
 
     if (hasPermission()) {
       setFragment();
@@ -506,28 +516,7 @@ public abstract class CameraActivity extends AppCompatActivity
     else apiSwitchCompat.setText("TFLITE");
   }
 
-/*
-  @Override
-  public void onClick(View v) {
-    if (v.getId() == R.id.plus) {
-      String threads = threadsTextView.getText().toString().trim();
-      int numThreads = Integer.parseInt(threads);
-      if (numThreads >= 9) return;
-      numThreads++;
-      threadsTextView.setText(String.valueOf(numThreads));
-      setNumThreads(numThreads);
-    } else if (v.getId() == R.id.minus) {
-      String threads = threadsTextView.getText().toString().trim();
-      int numThreads = Integer.parseInt(threads);
-      if (numThreads == 1) {
-        return;
-      }
-      numThreads--;
-      threadsTextView.setText(String.valueOf(numThreads));
-      setNumThreads(numThreads);
-    }
-  }
-*/
+
 
 /*  protected void showFrameInfo(String frameInfo) {
 //    frameValueTextView.setText(frameInfo);

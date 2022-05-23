@@ -12,8 +12,7 @@ import android.widget.Button
 
 public class BrakeFluidActivity : AppCompatActivity() {
 
-    fun intentMaker(button: Button, classs: Class<*>?){
-        val intent = Intent(this, classs )
+    fun intentMaker(button: Button){
         val vib = (getSystemService(Context.VIBRATOR_SERVICE) as Vibrator)
         if (Build.VERSION.SDK_INT >= 26) {
             vib.vibrate(VibrationEffect.createOneShot(70, VibrationEffect.DEFAULT_AMPLITUDE))
@@ -22,7 +21,6 @@ public class BrakeFluidActivity : AppCompatActivity() {
         }
         val mp = MediaPlayer.create(this, R.raw.sample)
         mp.start()
-        startActivity(intent)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +30,7 @@ public class BrakeFluidActivity : AppCompatActivity() {
         val backButton = findViewById<Button>(R.id.brake_fluid_backButton)
 
         backButton.setOnClickListener{
+            intentMaker(backButton)
             finish()
         }
     }

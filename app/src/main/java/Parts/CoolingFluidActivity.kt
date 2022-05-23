@@ -13,8 +13,7 @@ import detection.DetectorActivity
 
 class CoolingFluidActivity : AppCompatActivity() {
 
-    private fun intentMaker(button: Button, classs: Class<*>?){
-        val intent = Intent(this, classs )
+    fun intentMaker(button: Button){
         val vib = (getSystemService(Context.VIBRATOR_SERVICE) as Vibrator)
         if (Build.VERSION.SDK_INT >= 26) {
             vib.vibrate(VibrationEffect.createOneShot(70, VibrationEffect.DEFAULT_AMPLITUDE))
@@ -23,7 +22,6 @@ class CoolingFluidActivity : AppCompatActivity() {
         }
         val mp = MediaPlayer.create(this, R.raw.sample)
         mp.start()
-        startActivity(intent)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,10 +32,13 @@ class CoolingFluidActivity : AppCompatActivity() {
         val carScanButton = findViewById<Button>(R.id.windshield_washer_fluid_carscan)
 
         backButton.setOnClickListener{
+            intentMaker(backButton)
             finish()
         }
         carScanButton.setOnClickListener{
-            intentMaker(carScanButton, DetectorActivity::class.java)
+            intentMaker(carScanButton)
+            val intent = Intent(this, DetectorActivity::class.java)
+            startActivity(intent);
         }
     }
 }

@@ -57,5 +57,11 @@
          przeznaczony do takich właśnie warunków zazwyczaj na etykiecie widnieje napis "zimowy". W przypadku lata lub cieplejszych pór roku dobrym wyborem będzie płyn letni. Wlanie letniego płynu w zimę może skutkować
          zamarnięciem cieczy w zbiorniku.</string>
 
+    <string name="oil_refill_main_info">Olej silnikowy jak i jego sprawdzanie jest niezwykle istotne. Regularna kontrola poziomu oleju silnikowego minimalizuje ryzyko związane z niepotrzebnymi kosztami
+    związanymi z uszkodzeniami silnika i potrafi wcześnie zapobiec przykrym wydarzeniom. </string>
+    <string name="oil_refill_credentials">Aby poprawnie przeprowadzić kontrolę poziomu oleju, należy cały proces rozpocząć od upewnienia się, że silnik jest stosunkowo zimny. Następnym krokiem jest znalezienie bagnetu
+    odpowiedzialnego za kontrolę poziomu oleju. Po zlokalizowaniu bagnetu należy go wyciągnąć i przetrzeć suchą szmatką lub kawałkiem papieru i ponownie włożyć na miejsce. Po ponownym wyciągnięciu dopiero jest możliwy
+    poprawny odczyt a olej powinien znajdować się pośrodku podziałki(minimum i maksimum). W przypadku niedoboru oleju należy niezwłocznie uzupełnić ubytek. Optymalnym czasem na wymianę oleju to ekwiwalent przejechania
+    od piętnastu do trzydziestu tysięcy kilometrów. Istotną kwestią którą trzeba uwzględnić podczas kontroli poziomu oleju jest to aby wzrócić uwagę na to aby samochód był zaparkowany na płaskim terenie. </string>
     <string name="exploatation">Eksploatacja</string>
 </resources>

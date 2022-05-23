@@ -16,6 +16,7 @@
 
 package detection;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
@@ -30,8 +31,10 @@ import android.os.SystemClock;
 import android.util.Size;
 import android.util.TypedValue;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.remedy.BrakeFluidActivity;
 import com.example.remedy.R;
 
 import java.io.IOException;
@@ -79,7 +82,6 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
   private boolean computingDetection = false;
 
   private long timestamp = 0;
-
   private Matrix frameToCropTransform;
   private Matrix cropToFrameTransform;
 
@@ -151,7 +153,9 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
 
     tracker.setFrameConfiguration(previewWidth, previewHeight, sensorOrientation);
   }
-
+  @Override
+  public void onClick(View view) {
+  }
   @Override
   protected void processImage() {
     ++timestamp;
@@ -177,6 +181,8 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
       ImageUtils.saveBitmap(croppedBitmap);
     }
 
+
+
     runInBackground(
         new Runnable() {
           @Override
@@ -185,6 +191,8 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
             final long startTime = SystemClock.uptimeMillis();
             final List<Detector.Recognition> results = detector.recognizeImage(croppedBitmap);
             lastProcessingTimeMs = SystemClock.uptimeMillis() - startTime;
+
+
 
             cropCopyBitmap = Bitmap.createBitmap(croppedBitmap);
             final Canvas canvas = new Canvas(cropCopyBitmap);
@@ -241,11 +249,6 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
   @Override
   protected Size getDesiredPreviewFrameSize() {
     return DESIRED_PREVIEW_SIZE;
-  }
-
-  @Override
-  public void onClick(View view) {
-
   }
 
   // Which detection model to use: by default uses Tensorflow Object Detection API frozen

@@ -12,8 +12,7 @@ import android.widget.Button
 
 class OilRefillActivity : AppCompatActivity() {
 
-    fun intentMaker(button: Button, classs: Class<*>?){
-        val intent = Intent(this, classs )
+    fun intentMaker(button: Button){
         val vib = (getSystemService(Context.VIBRATOR_SERVICE) as Vibrator)
         if (Build.VERSION.SDK_INT >= 26) {
             vib.vibrate(VibrationEffect.createOneShot(70, VibrationEffect.DEFAULT_AMPLITUDE))
@@ -22,15 +21,14 @@ class OilRefillActivity : AppCompatActivity() {
         }
         val mp = MediaPlayer.create(this, R.raw.sample)
         mp.start()
-        startActivity(intent)
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_oil_refill)
 
         val backButton = findViewById<Button>(R.id.oil_refill_backButton)
         backButton.setOnClickListener{
+            intentMaker(backButton)
             finish()
         }
     }
