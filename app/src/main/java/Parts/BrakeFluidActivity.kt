@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.widget.Button
+import detection.DetectorActivity
 
 public class BrakeFluidActivity : AppCompatActivity() {
 
@@ -25,13 +26,19 @@ public class BrakeFluidActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_brake_fluid)
+        setContentView(R.layout.activity_cooling_fluid)
 
-        val backButton = findViewById<Button>(R.id.brake_fluid_backButton)
+        val backButton = findViewById<Button>(R.id.windshield_washer_fluid_backButton)
+        val carScanButton = findViewById<Button>(R.id.windshield_washer_fluid_carscan)
 
         backButton.setOnClickListener{
             intentMaker(backButton)
             finish()
+        }
+        carScanButton.setOnClickListener{
+            intentMaker(carScanButton)
+            val intent = Intent(this, DetectorActivity::class.java)
+            startActivity(intent);
         }
     }
 }

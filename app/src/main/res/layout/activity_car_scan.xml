@@ -74,6 +74,18 @@
         app:layout_constraintTop_toBottomOf="@+id/Oil_level_btn"
         tools:ignore="RtlCompat" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toStartOf="@+id/carScan_backButton"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logo_remedy_2" />
+
     <Button
         android:id="@+id/Brake_fluid_btn"
         android:layout_width="0dp"
@@ -125,5 +137,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="445dp"
+        android:layout_height="726dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/mirrored_wrench" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

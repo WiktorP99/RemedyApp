@@ -9,16 +9,16 @@
         <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/drawable/text_view_style.xml" value="0.35572916666666665" />
         <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_app_info.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_ar_core.xml" value="0.19895833333333332" />
-        <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_brake_fluid.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_car_scan.xml" value="0.2866847826086957" />
-        <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_cooling_fluid.xml" value="0.33" />
+        <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_brake_fluid.xml" value="0.16" />
+        <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_car_scan.xml" value="0.14" />
+        <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_cooling_fluid.xml" value="0.2960954446854664" />
         <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_cooling_fluid_scanning.xml" value="0.25" />
         <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_log_in.xml" value="0.2989583333333333" />
         <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_log_in_google.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_login_tmp.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_oil_level.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_oil_refill.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_oil_refill.xml" value="0.26427879961277834" />
         <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_register.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/activity_windshield_washer_fluid.xml" value="0.5" />
         <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/spinner_dropdown_text_view.xml" value="0.36666666666666664" />
@@ -26,6 +26,8 @@
         <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/tfe_od_activity_camera.xml" value="0.25" />
         <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/tfe_od_camera_connection_fragment_tracking.xml" value="0.15307971014492755" />
         <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/layout/tfe_od_layout_bottom_sheet.xml" value="0.15307971014492755" />
+        <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3828125" />
+        <entry key="..\:/Users/WiktorPC/Desktop/STUDIA/Remedy_cred/Remedy/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3828125" />
       </map>
     </option>
   </component>

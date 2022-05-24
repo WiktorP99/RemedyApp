@@ -40,21 +40,21 @@ public class MultiBoxTracker {
   private static final float TEXT_SIZE_DIP = 18;
   private static final float MIN_SIZE = 16.0f;
   private static final int[] COLORS = {
-    Color.BLUE,
-    Color.RED,
-    Color.GREEN,
-    Color.YELLOW,
-    Color.CYAN,
-    Color.MAGENTA,
     Color.WHITE,
-    Color.parseColor("#55FF55"),
-    Color.parseColor("#FFA500"),
+    Color.WHITE,
+    Color.WHITE,
+    Color.WHITE,
+    Color.WHITE,
+    Color.WHITE,
+    Color.WHITE,
     Color.parseColor("#FF8888"),
-    Color.parseColor("#AAAAFF"),
-    Color.parseColor("#FFFFAA"),
-    Color.parseColor("#55AAAA"),
-    Color.parseColor("#AA33AA"),
-    Color.parseColor("#0D0068")
+    Color.parseColor("#FF8888"),
+    Color.parseColor("#FF8888"),
+    Color.parseColor("#FF8888"),
+    Color.parseColor("#FF8888"),
+    Color.parseColor("#FF8888"),
+    Color.parseColor("#FF8888"),
+    Color.parseColor("#FF8888")
   };
   final List<Pair<Float, RectF>> screenRects = new LinkedList<Pair<Float, RectF>>();
   private final Logger logger = new Logger();

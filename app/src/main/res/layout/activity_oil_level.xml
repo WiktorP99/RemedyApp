@@ -35,7 +35,16 @@
             app:layout_constraintTop_toBottomOf="@+id/windshield_washer_fluid_carscan"
             app:layout_constraintVertical_bias="0.0"
             tools:ignore="RtlCompat" />
-
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="70dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="-70dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/windshield_washer_fluid_backButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/logo_remedy_2" />
         <Button
             android:id="@+id/windshield_washer_fluid_carscan"
             android:layout_width="200dp"

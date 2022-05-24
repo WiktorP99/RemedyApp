@@ -30,7 +30,7 @@ class OilLevelActivity : AppCompatActivity() {
 
         val backButton = findViewById<Button>(R.id.windshield_washer_fluid_backButton)
         val carScanButton = findViewById<Button>(R.id.windshield_washer_fluid_carscan)
-        
+
         backButton.setOnClickListener{
             intentMaker(backButton)
             finish()

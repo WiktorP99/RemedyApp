@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.widget.Button
+import detection.DetectorActivity
 
 class OilRefillActivity : AppCompatActivity() {
 
@@ -26,10 +27,17 @@ class OilRefillActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_oil_refill)
 
-        val backButton = findViewById<Button>(R.id.oil_refill_backButton)
+        val backButton = findViewById<Button>(R.id.windshield_washer_fluid_backButton)
+        val carScanButton = findViewById<Button>(R.id.windshield_washer_fluid_carscan)
+
         backButton.setOnClickListener{
             intentMaker(backButton)
             finish()
+        }
+        carScanButton.setOnClickListener{
+            intentMaker(carScanButton)
+            val intent = Intent(this, DetectorActivity::class.java)
+            startActivity(intent);
         }
     }
 }

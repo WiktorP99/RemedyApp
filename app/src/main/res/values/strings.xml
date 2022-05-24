@@ -55,7 +55,7 @@
     <string name="windshield_washer_fluid_exploitation">Płyn do spryskiwaczy należy regularnie uzupełniać oraz sprawdzać jego poziom. Uzupełnianie płynu jest niezwykle proste, należy po prostu dolać odpowiednią ilość tak żeby jego poziom
          znajdował się pomiędzy minimum a maksimum. Istotną kwestią do porusznia w temacie płynu do spryskiwaczy jest jego odpowiednie dobranie w zależności od panujacych warunków na drodze. W przypadku zimy należy wybrać płyn
          przeznaczony do takich właśnie warunków zazwyczaj na etykiecie widnieje napis "zimowy". W przypadku lata lub cieplejszych pór roku dobrym wyborem będzie płyn letni. Wlanie letniego płynu w zimę może skutkować
-         zamarnięciem cieczy w zbiorniku.</string>
+         zamarznięciem cieczy w zbiorniku.</string>
 
     <string name="oil_refill_main_info">Olej silnikowy jak i jego sprawdzanie jest niezwykle istotne. Regularna kontrola poziomu oleju silnikowego minimalizuje ryzyko związane z niepotrzebnymi kosztami
     związanymi z uszkodzeniami silnika i potrafi wcześnie zapobiec przykrym wydarzeniom. </string>
@@ -63,5 +63,24 @@
     odpowiedzialnego za kontrolę poziomu oleju. Po zlokalizowaniu bagnetu należy go wyciągnąć i przetrzeć suchą szmatką lub kawałkiem papieru i ponownie włożyć na miejsce. Po ponownym wyciągnięciu dopiero jest możliwy
     poprawny odczyt a olej powinien znajdować się pośrodku podziałki(minimum i maksimum). W przypadku niedoboru oleju należy niezwłocznie uzupełnić ubytek. Optymalnym czasem na wymianę oleju to ekwiwalent przejechania
     od piętnastu do trzydziestu tysięcy kilometrów. Istotną kwestią którą trzeba uwzględnić podczas kontroli poziomu oleju jest to aby wzrócić uwagę na to aby samochód był zaparkowany na płaskim terenie. </string>
+    <string name ="oil_level_main_info">Wlew oleju silnikowego jest odpowiedzialny za utrzymywanie odpowiedniego poziomu oleju w samochodzie. Podczas gdy po przeprowadzonej kontroli poziomu oleju silnikowego
+        okaże się, że jest go za mało możemy dolać ubytek oleju korzystając właśnie z wcześniej wspomnianego wlewu. Podczas czynności uzupełniania brakującego oleju należy zachować czujność aby poziom oleju nie
+        wykraczał na podziałce ponad maksimum</string>
+    <string name ="oil_refill">Wymiana oleju silnikowego</string>
+    <string name ="oil_level_refill_info">Przed wymianą oleju silnikowego należy zadbać o odpowiednią wannę, aby móc zebrać w niej wymieniany olej oraz o nowy filtr oleju, który odpowiedzialny jest za zbieranie
+        nieczystości gromadzonych w samochodzie. Proces wymiany oleju rozpoczyna się od podniesienia przedniej części samochodu w celu uzyskania dostępu do korka w misce olejowej. Po podstawieniu wanienki pod korek
+        można go odkręcić i spokojnie poczekać aż cały olej do niej spłynie. Kolejnym krokiem jest zatkanie korka oraz wymiana filtra olejowego. Po wykonaniu wszystkich czynności można opuścić samochód i przystąpić do
+        wlewania nowego oleju. Ilość oraz rodzaj wlewanego oleju powinna być zgodna z zaleceniami producenta pojazdu.</string>
+    <string name="oil_level_important_info">Wymiana oleju samochodowego powinna być wykonywana co około piętnaście tysięcy kilometrów, lub co rok w przypadku gdy użytkownik samochodu nie przejechał wyznaczonej do
+    wymiany oleju odległości.</string>
+
+
+    <string name="brakes_fluid_main_info">Aby układ hamowania w ciężkim i rozpędzonym samochodzie zadziałał poprawnie, konieczne jest dociśnięcie klocka ze znaczną siłą.
+        Odpowiedni nacisk uzyskuje się poprzez zastosowanie specjalnej pompy, która za pomocą płynu hamulcowego naciska na tłoczek klocka. Wskutek tarcia poszczególne elementy układu znacząco się nagrzewają, co
+    prowadzi do podgrzania płynu hamulcowego. Początkowo jest on odporny na działanie wysokich temperatur ale z upływem czasu traci on swoje właściwości. Ciekawostką jest fakt, iż płyn hamulcowy jest
+    higroskopijny i w naturalny sposób pochałania wilgoć która dostaje się poprzez nieszczelności w przewodach czy uszczelkach. </string>
+    <string name="brakes_fluid_exploitation">Poziom płynu hamulcowego powinien znajdować się pomiędzy wartością minimum a maksimum najdującą się na zbiorniku. W przypadku wyraźnego upytku płynu należy go dolać
+     zwracając uwagę na rodzaj wcześniej wlewanego płynu. Jeśli płynu hamulcowego jest natomiast za dużo najlepszym rozwiązaniem będzie odessanie nadmiaru przy pomocy strzykawki.</string>
+    <string name="oil_level_important_info_label">Istotne informacje</string>
     <string name="exploatation">Eksploatacja</string>
 </resources>
